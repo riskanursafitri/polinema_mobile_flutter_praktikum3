@@ -21,12 +21,14 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           margin: EdgeInsets.all(8),
-          child: TextFormField(
-            obscureText: false,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Masukkan Suhu dalam Celcius',
-            ),
+          child: Column(
+            children: [
+              TextFormField(
+                  decoration: new InputDecoration(
+                      labelText: "Masukkan Suhu Dalam Celcius"),
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [FilteringTextInputFormatter.digitsOnly]),
+            ],
           ),
         ),
       ),
